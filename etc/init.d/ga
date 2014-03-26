@@ -1,0 +1,14 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2008 OpenWrt.org
+ 
+START=99
+
+start() {
+  sleep 5   # make sure boot process is done, no more console msgs
+  echo "Google Analytics Realtime Started"
+  while : 
+  do 
+    echo "Time: $(date)" >> /home/code/log.txt
+    python -u /home/code/main.py >> /home/code/log.txt 2>&1
+  done
+}                         
