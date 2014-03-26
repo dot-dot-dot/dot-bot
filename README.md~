@@ -10,16 +10,14 @@ It moves over the planisphere fixed on the wall and stops over the position of t
 
 When none is connected, the led panel goes back to the center of the map and shows the latest tweets made by our Twitter account ([@dot_cube](https://twitter.com/dot_cube)), using the **python-twitter** library.
 
-## Hardware
 
-
-## Software
+## Folders
 
 * `code/` - this folder contains the "Linino-side" code, written in Python, that queries Twitter and Google Analytics Real Time
 * `sketch/` - this folder contains the Arduino sketch and the libraries to support the MotorShield and the ht1632c led matrix 
 * `etc/init.d/` - this folder contains the startup script that starts automatically at boot time
 
-### Linino-side configuration
+## Linino-side configuration
 
 1. Edit `code/twitter_default.cfg` with your keys and secrets values obtained from [Twitter](https://dev.twitter.com/), and save it as `code/twitter.cfg`.
 3. Request the access to the Real Time Reporting API Private Beta and create a new project on your [Google Developers Console](https://console.developers.google.com).
@@ -31,11 +29,11 @@ When none is connected, the led panel goes back to the center of the map and sho
     **on your Arduino Yùn** - needs the `--noauth_local_webserver` parameter. It shows a personal URL, that you have to copy and paste on your machine, and enter the verification code obtained after the login.
 7. Type `/etc/init.d/ga enable` on Yùn to enable the service autostart.
 
-### Arduino configuration
+## Arduino configuration
 
 TODO
 
-### Calibration
+## Calibration
 
 The first time you upload the sketch on your Yùn you have to connect using the Arudino IDE console, it shows a simple menu to calibrate the led panel in the center of the map.
 To move the led panel use the syntax `X:Y` (note: values are absolute, not relative). When calibration is done, press `H` and then `A` to start auto mode.
